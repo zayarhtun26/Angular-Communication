@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">Child</div>
+  <div class="card-body">
+    <label for="val" class="form-label">Input</label>
+    <input
+      [(ngModel)]="value"
+      type="text"
+      name="val"
+      id="val"
+      class="form-control"
+      placeholder="Enter Text"
+    />
+    <button (click)="add()" class="btn btn-outline-danger mt-3">Add</button>
+  </div>
+</div>

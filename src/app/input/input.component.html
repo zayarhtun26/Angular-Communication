@@ -1,0 +1,26 @@
+<h3 class="text-success">Using @Input()</h3>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header bg-dark text-white">Input Data</div>
+      <div class="card-body bg-success">
+        <ol class="list-group list-group-flush" *ngFor="let c of courses">
+          <li
+            class="list-group-item d-flex justify-content-between list-group-item-action"
+            (click)="target = c"
+            [class.active]="target == c"
+          >
+            <div class="ms-2 me-auto text-warning">{{ c.name }}</div>
+            <span class="badge bg-primary rounded-pill alg">
+              {{ c.duration }}
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <app-input-child [childCourse]="target"> </app-input-child>
+  </div>
+</div>
